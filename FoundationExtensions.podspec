@@ -9,5 +9,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Tinghui/FoundationExtensions.git", :tag => "1.0.0" }
   s.requires_arc = true
   s.source_files = 'FoundationExtensions/*.{h,m}'
-  s.framework    = 'UIKit,Foundation'
+  s.framework    = 'Foundation'
 end
