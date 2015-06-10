@@ -36,8 +36,10 @@
 #pragma mark - Math
 //#define fequal(a, b)            (fabs((a) - (b)) < FLT_EPSILON)
 //#define fequalzero(a)           (fabs(a) < FLT_EPSILON)
-#define DegreesToRadian(x)      (M_PI * (x) / 180.0f)
-#define RadianToDegrees(x)      (180.0f * (x) / M_PI)
-#define RandomNumber(min, max)  ((min) + arc4random()%((max)-(min)+1))
+#define DegreesToRadian(x)          (M_PI*(x)/180.0f)
+#define RadianToDegrees(x)          (180.0f*(x)/M_PI)
+#define RandomNumber(min, max)      ((min)+arc4random()%((max)-(min)+1))
+#define RandomFloatNumber(min, max) ((((float)(arc4random()%((unsigned)RAND_MAX+1))/RAND_MAX)*((max)-(min)))\
+                                        +(min))
 
 #endif
