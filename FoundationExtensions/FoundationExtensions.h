@@ -19,7 +19,6 @@
 #import "NSFileManager+Extensions.h"
 #import "NSNotificationCenter+Extensions.h"
 #import "NSObjCRuntime+Extensions.h"
-#import "NSPathUtilities+Extensions.h"
 #import "NSString+Extensions.h"
 #import "NSIndexPath+Extensions.h"
 #import "NSDate+Extensions.h"

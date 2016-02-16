@@ -10,7 +10,12 @@
 
 @implementation NSString (Extensions)
 
-#pragma Hash
+#pragma mark - LocalizedString
+- (NSString *)localizedString {
+    return NSLocalizedString(self, nil);
+}
+
+#pragma mark - Hash
 - (NSString *)MD5String {
     unsigned char result[CC_MD5_DIGEST_LENGTH];
     const char *bytes = [self UTF8String];
@@ -23,13 +28,18 @@
             result[10], result[11], result[12], result[13], result[14], result[15]];
 }
 
-#pragma Utils
+#pragma mark - Utils
 - (NSString *)stringByTrimming {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
 - (BOOL)isNotNilOrWhiteSpaceString {
     return [self stringByTrimming].length > 0;
+}
+
+- (BOOL)isAlphabetOrNumbersString {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"^[a-zA-Z0-9]+$"];
+    return [predicate evaluateWithObject:self];
 }
 
 - (BOOL)isValidEmail {
@@ -97,14 +107,17 @@
 
 - (NSString *)appendQueryStringKey:(NSString *)key withStringValue:(NSString *)value {
     if ([self rangeOfString:@"?"].length == 0) {
-        return [NSString stringWithFormat:@"%@?%@=%@", [self stringByTrimming], key, [value urlQueryStringValueEncodeUsingUTF8Encoding]];
+        return [NSString stringWithFormat:@"%@?%@=%@", [self stringByTrimming], key,
+                [value urlQueryStringValueEncodeUsingUTF8Encoding]];
     }
     else {
         if ([self rangeOfString:@"&"].location == (self.length - 1)) {
-            return [NSString stringWithFormat:@"%@%@=%@", [self stringByTrimming], key, [value urlQueryStringValueEncodeUsingUTF8Encoding]];
+            return [NSString stringWithFormat:@"%@%@=%@", [self stringByTrimming], key,
+                    [value urlQueryStringValueEncodeUsingUTF8Encoding]];
         }
         else {
-            return [NSString stringWithFormat:@"%@&%@=%@", [self stringByTrimming], key, [value urlQueryStringValueEncodeUsingUTF8Encoding]];
+            return [NSString stringWithFormat:@"%@&%@=%@", [self stringByTrimming], key,
+                    [value urlQueryStringValueEncodeUsingUTF8Encoding]];
         }
     }
 }

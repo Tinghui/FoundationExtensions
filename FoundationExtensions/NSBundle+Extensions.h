@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#define LocalString(string)                     NSLocalizedString((string), nil)
-#define FormatString(args...)                   [NSString stringWithFormat:args]
-
 #define MainBundle()                                ([NSBundle mainBundle])
 #define PathForBundleResource(resName, resType)     [MainBundle() pathForResource:(resName) ofType:(resType)]
 #define URLForBundleResource(resName, resType)      [MainBundle() URLForResource:(resName) \

@@ -10,16 +10,24 @@
 #import <Foundation/Foundation.h>
 #import <CommonCrypto/CommonDigest.h>
 
+#define FormatString(args...)                   [NSString stringWithFormat:args]
+
 @interface NSString (Extensions)
 
-#pragma Hash
+#pragma mark - LocalizedString
+@property (nonatomic, readonly, copy) NSString *localizedString;
+
+
+#pragma mark - Hash
 - (NSString *)MD5String;
 
 
-#pragma Utils
+#pragma mark - Utils
 - (NSString *)stringByTrimming;
 
 - (BOOL)isNotNilOrWhiteSpaceString;
+
+- (BOOL)isAlphabetOrNumbersString;
 
 - (BOOL)isValidEmail;
 
@@ -44,3 +52,5 @@
 - (CGSize)sizeWithFont:(UIFont *)font withMaxWidth:(CGFloat)maxWidth;
 
 @end
+
+

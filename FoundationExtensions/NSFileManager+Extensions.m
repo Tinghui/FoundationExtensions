@@ -10,6 +10,20 @@
 
 @implementation NSFileManager (Extensions)
 
+#pragma mark - Directory Path
++ (NSString *)cachesDirectory {
+    return [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+}
+
++ (NSString *)documentDirectory {
+    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+}
+
++ (NSString *)libraryDirectory {
+    return [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject];
+}
+
+#pragma mark - iCloud Directory Backup
 + (void)makeSureDirectoryExistsAtPath:(NSString *)directoryPath {
     if ([DefaultFileManager() fileExistsAtPath:directoryPath]) {
         return;
@@ -56,3 +70,5 @@
 }
 
 @end
+
+

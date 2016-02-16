@@ -19,6 +19,8 @@
 		E176C7721AEE6F0100B9793A /* NSIndexPath+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E176C7631AEE6F0100B9793A /* NSIndexPath+Extensions.m */; };
 		E176C7731AEE6F0100B9793A /* NSNotificationCenter+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E176C7651AEE6F0100B9793A /* NSNotificationCenter+Extensions.m */; };
 		E176C7751AEE6F0100B9793A /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E176C76B1AEE6F0100B9793A /* NSString+Extensions.m */; };
+		E1D7EDB91C72C30D002E5CC6 /* FoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D7EDB81C72C30D002E5CC6 /* FoundationTests.m */; };
+		E1D7EDBB1C72CE82002E5CC6 /* Blocks+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D7EDBA1C72CE82002E5CC6 /* Blocks+Extensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,9 +71,10 @@
 		E176C7641AEE6F0100B9793A /* NSNotificationCenter+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+Extensions.h"; sourceTree = "<group>"; };
 		E176C7651AEE6F0100B9793A /* NSNotificationCenter+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+Extensions.m"; sourceTree = "<group>"; };
 		E176C7661AEE6F0100B9793A /* NSObjCRuntime+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObjCRuntime+Extensions.h"; sourceTree = "<group>"; };
-		E176C7671AEE6F0100B9793A /* NSPathUtilities+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPathUtilities+Extensions.h"; sourceTree = "<group>"; };
 		E176C76A1AEE6F0100B9793A /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
 		E176C76B1AEE6F0100B9793A /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
+		E1D7EDB81C72C30D002E5CC6 /* FoundationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundationTests.m; sourceTree = "<group>"; };
+		E1D7EDBA1C72CE82002E5CC6 /* Blocks+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Blocks+Extensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +120,9 @@
 				E176C73D1AEE6ECD00B9793A /* FoundationExtensions.h */,
 				E176C73F1AEE6ECD00B9793A /* FoundationExtensions.m */,
 				E176C7541AEE6F0100B9793A /* Blocks+Extensions.h */,
+				E1D7EDBA1C72CE82002E5CC6 /* Blocks+Extensions.m */,
 				E176C7551AEE6F0100B9793A /* Dispatch+Extensions.h */,
 				E176C7661AEE6F0100B9793A /* NSObjCRuntime+Extensions.h */,
-				E176C7671AEE6F0100B9793A /* NSPathUtilities+Extensions.h */,
 				E176C7561AEE6F0100B9793A /* NSBundle+Extensions.h */,
 				E176C7571AEE6F0100B9793A /* NSBundle+Extensions.m */,
 				E176C7581AEE6F0100B9793A /* NSData+Extensions.h */,
@@ -146,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				E176C74A1AEE6ECD00B9793A /* Supporting Files */,
+				E1D7EDB81C72C30D002E5CC6 /* FoundationTests.m */,
 			);
 			path = FoundationExtensionsTests;
 			sourceTree = "<group>";
@@ -256,6 +260,7 @@
 				E176C76C1AEE6F0100B9793A /* NSBundle+Extensions.m in Sources */,
 				E176C7731AEE6F0100B9793A /* NSNotificationCenter+Extensions.m in Sources */,
 				E176C7401AEE6ECD00B9793A /* FoundationExtensions.m in Sources */,
+				E1D7EDBB1C72CE82002E5CC6 /* Blocks+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D7EDB91C72C30D002E5CC6 /* FoundationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +393,7 @@
 				);
 				INFOPLIST_FILE = FoundationExtensionsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -401,6 +408,7 @@
 				);
 				INFOPLIST_FILE = FoundationExtensionsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -424,6 +432,7 @@
 				E176C7501AEE6ECD00B9793A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E176C7511AEE6ECD00B9793A /* Build configuration list for PBXNativeTarget "FoundationExtensionsTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +441,7 @@
 				E176C7531AEE6ECD00B9793A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

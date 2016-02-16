@@ -22,6 +22,14 @@
 
 @interface NSFileManager (Extensions)
 
+#pragma mark - Directory Path
++ (NSString *)cachesDirectory;
++ (NSString *)documentDirectory;
++ (NSString *)libraryDirectory;
+
+
+
+#pragma mark - iCloud Directory Backup
 /**
  *  Make sure directory path is existed, if not created it
  *
