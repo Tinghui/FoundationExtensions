@@ -10,8 +10,10 @@
 
 @interface NSError (Extensions)
 
-+ (id)errorWithCode:(NSInteger)code localizedDescription:(NSString *)description;
++ (nonnull instancetype)errorWithCode:(NSInteger)code localizedDescription:(nullable NSString *)description;
 
-+ (id)errorWithDomain:(NSString *)domain code:(NSInteger)code localizedDescription:(NSString *)description;
++ (nonnull instancetype)errorWithDomain:(nonnull NSString *)domain
+                                   code:(NSInteger)code
+                   localizedDescription:(nullable NSString *)description;
 
 @end

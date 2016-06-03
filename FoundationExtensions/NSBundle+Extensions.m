@@ -10,4 +10,20 @@
 
 @implementation NSBundle (Extensions)
 
++ (nullable NSString *)bundleDisplayName {
+    return [[self mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+}
+
++ (nullable NSString *)bundleIdentifier {
+    return [[self mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
+}
+
++ (nullable NSString *)bundleShortVersion {
+    return [[self mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+}
+
++ (nullable NSString *)bundleBuildVersion {
+    return [[self mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
+}
+
 @end

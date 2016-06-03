@@ -23,9 +23,9 @@
 @interface NSFileManager (Extensions)
 
 #pragma mark - Directory Path
-+ (NSString *)cachesDirectory;
-+ (NSString *)documentDirectory;
-+ (NSString *)libraryDirectory;
++ (nullable NSString *)cachesDirectory;
++ (nullable NSString *)documentDirectory;
++ (nullable NSString *)libraryDirectory;
 
 
 
@@ -35,7 +35,7 @@
  *
  *  @param directoryPath path for the directory
  */
-+ (void)makeSureDirectoryExistsAtPath:(NSString *)directoryPath;
++ (void)makeSureDirectoryExistsAtPath:(nonnull NSString *)directoryPath;
 
 
 /**
@@ -46,6 +46,8 @@
  *
  *  @return YES, if success; otherwise return NO.
  */
-+ (BOOL)setItemAtPath:(NSString *)itemPath excludeFromiCloud:(BOOL)exclude;
++ (BOOL)setItemAtPath:(nonnull NSString *)itemPath excludeFromiCloud:(BOOL)exclude;
 
 @end
+
+

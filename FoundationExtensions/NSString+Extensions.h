@@ -14,42 +14,52 @@
 
 @interface NSString (Extensions)
 
+
+
 #pragma mark - LocalizedString
-@property (nonatomic, readonly, copy) NSString *localizedString;
+@property (nonatomic, readonly, nonnull) NSString *localizedString;
+
 
 
 #pragma mark - Hash
-- (NSString *)MD5String;
+@property (nonatomic, readonly, nonnull) NSString *MD5String;
+
 
 
 #pragma mark - Utils
-- (NSString *)stringByTrimming;
-
-- (BOOL)isNotNilOrWhiteSpaceString;
-
-- (BOOL)isAlphabetOrNumbersString;
-
-- (BOOL)isValidEmail;
-
-- (BOOL)isChineseCellPhoneNumber;
+@property (nonatomic, readonly, nonnull) NSString *trimmedString;
+@property (nonatomic, readonly) BOOL isNotNilOrWhiteSpace;
+@property (nonatomic, readonly) BOOL isAlphabetOrNumbers;
+@property (nonatomic, readonly) BOOL isValidEmail;
+@property (nonatomic, readonly) BOOL isChineseCellPhoneNumber;
 
 
-#pragma mark - URL
-- (NSString *)URLEncodeString;
 
-- (NSString *)urlQueryStringValueEncodeUsingUTF8Encoding;
-- (NSString *)urlQueryStringValueEncodeUsingEncoding:(NSStringEncoding)encoding;
+#pragma mark - URL Encode/Decode
+@property (nonatomic, readonly, nonnull) NSString *urlDecodedString;
+@property (nonatomic, readonly, nonnull) NSString *urlEncodedString;
+@property (nonatomic, readonly, nonnull) NSString *urlEncodeOnceString;
 
-- (NSString *)urlQueryStringValueDecodeUsingUTF8Encoding;
-- (NSString *)urlQueryStringValueDecodeUsingEncoding:(NSStringEncoding)encoding;
+#pragma mark URL Query
+@property (nonatomic, readonly, nullable)   NSString *urlQueryString;
+@property (nonatomic, readonly, nonnull)    NSString *stringByDeletingURLQueryString;
+@property (nonatomic, readonly, nonnull)    NSDictionary<NSString *, NSString *> *urlQueryParameters;
 
-- (NSString *)appendQueryStringKey:(NSString *)key withValue:(id)value;
-- (NSString *)appendQueryStringKey:(NSString *)key withStringValue:(NSString *)value;
+- (nonnull NSString *)stringByAppendingURLQuery:(nonnull NSString *)query;
+- (nonnull NSString *)stringByReplacingURLQueryWithQuery:(nonnull NSString *)query;
 
-- (NSDictionary *)queryStringToDictionary;
++ (nullable NSString *)queryStringForParameters:(nullable NSDictionary<NSString *, id> *)parameters;
+
+#pragma mark URL Fragment
+@property (nonatomic, readonly, nullable)   NSString *urlFragmentString;
+@property (nonatomic, readonly, nonnull)    NSString *stringByDeletingURLFragmentString;
+
+- (nonnull NSString *)stringByAppendingURLFragment:(nullable NSString *)fragment;
+
+
 
 #pragma mark - Size
-- (CGSize)sizeWithFont:(UIFont *)font withMaxWidth:(CGFloat)maxWidth;
+- (CGSize)sizeWithFont:(nonnull UIFont *)font withMaxWidth:(CGFloat)maxWidth;
 
 @end
 

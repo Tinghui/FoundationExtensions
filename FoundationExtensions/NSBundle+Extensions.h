@@ -8,18 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-#define MainBundle()                                ([NSBundle mainBundle])
-#define PathForBundleResource(resName, resType)     [MainBundle() pathForResource:(resName) ofType:(resType)]
-#define URLForBundleResource(resName, resType)      [MainBundle() URLForResource:(resName) \
-                                                                    withExtension:(resType)]
-#define APPDisplayName()                            [MainBundle() \
-                                                        objectForInfoDictionaryKey:@"CFBundleDisplayName"]
-#define AppBundleIdentifier()                       [MainBundle() \
-                                                        objectForInfoDictionaryKey:@"CFBundleIdentifier"]
-#define AppReleaseVersionNumber()                   [MainBundle() \
-                                                        objectForInfoDictionaryKey:@"CFBundleShortVersionString"]
-#define AppBuildVersionNumber()                     [MainBundle() objectForInfoDictionaryKey:@"CFBundleVersion"]
 
 @interface NSBundle (Extensions)
 
++ (nullable NSString *)bundleDisplayName;
+
++ (nullable NSString *)bundleIdentifier;
+
++ (nullable NSString *)bundleShortVersion;
+
++ (nullable NSString *)bundleBuildVersion;
+    
 @end

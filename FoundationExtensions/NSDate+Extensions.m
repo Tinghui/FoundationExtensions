@@ -10,30 +10,6 @@
 
 @implementation NSDate (Extensions)
 
-- (NSDate *)beginningOfDay {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit
-                                               fromDate:self];
-    return [calendar dateFromComponents:components];
-}
-
-- (BOOL)isSameDayWith:(NSDate *)anotherDay {
-    BOOL sameDay = NO;
-    if (anotherDay != nil) {
-        NSCalendar *cal = [NSCalendar currentCalendar];
-        NSDateComponents *comps1 = [cal components:(NSMonthCalendarUnit| NSYearCalendarUnit | NSDayCalendarUnit)
-                                          fromDate:self];
-        NSDateComponents *comps2 = [cal components:(NSMonthCalendarUnit| NSYearCalendarUnit | NSDayCalendarUnit)
-                                          fromDate:anotherDay];
-        
-        sameDay = ([comps1 day] == [comps2 day]
-                   && [comps1 month] == [comps2 month]
-                   && [comps1 year] == [comps2 year]);
-    }
-    
-    return sameDay;
-}
-
 - (NSInteger)month {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:NSMonthCalendarUnit fromDate:self];
@@ -57,6 +33,30 @@
     NSDateComponents *components = [calendar components:NSWeekdayCalendarUnit fromDate:self];
     
     return [components weekday];
+}
+
+- (NSDate *)beginningOfDay {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit
+                                               fromDate:self];
+    return [calendar dateFromComponents:components];
+}
+
+- (BOOL)isSameDayWith:(NSDate *)anotherDay {
+    BOOL sameDay = NO;
+    if (anotherDay != nil) {
+        NSCalendar *cal = [NSCalendar currentCalendar];
+        NSDateComponents *comps1 = [cal components:(NSMonthCalendarUnit| NSYearCalendarUnit | NSDayCalendarUnit)
+                                          fromDate:self];
+        NSDateComponents *comps2 = [cal components:(NSMonthCalendarUnit| NSYearCalendarUnit | NSDayCalendarUnit)
+                                          fromDate:anotherDay];
+        
+        sameDay = ([comps1 day] == [comps2 day]
+                   && [comps1 month] == [comps2 month]
+                   && [comps1 year] == [comps2 year]);
+    }
+    
+    return sameDay;
 }
 
 - (NSString *)toSecondEndingString {

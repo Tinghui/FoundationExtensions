@@ -11,6 +11,6 @@
 
 @interface NSData (Extensions)
 
-- (NSString *)MD5String;
+@property (nonatomic, readonly, nonnull) NSString *MD5String;
 
 @end

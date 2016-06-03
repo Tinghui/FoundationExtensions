@@ -10,11 +10,13 @@
 
 @implementation NSError (Extensions)
 
-+ (id)errorWithCode:(NSInteger)code localizedDescription:(NSString *)description {
++ (nonnull instancetype)errorWithCode:(NSInteger)code localizedDescription:(nullable NSString *)description {
     return [self errorWithDomain:@"Undefined error domain" code:code localizedDescription:description];
 }
 
-+ (id)errorWithDomain:(NSString *)domain code:(NSInteger)code localizedDescription:(NSString *)description {
++ (nonnull instancetype)errorWithDomain:(nonnull NSString *)domain
+                                   code:(NSInteger)code
+                   localizedDescription:(nullable NSString *)description {
     NSDictionary *userInfo = nil;
     if (description) {
         userInfo = @{NSLocalizedDescriptionKey: description,

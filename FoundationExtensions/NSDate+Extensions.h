@@ -10,25 +10,25 @@
 
 @interface NSDate (Extensions)
 
-- (NSDate *)beginningOfDay;
-- (BOOL)isSameDayWith:(NSDate *)anotherDay;
+@property (nonatomic, readonly) NSInteger month;
+@property (nonatomic, readonly) NSInteger day;
+@property (nonatomic, readonly) NSInteger hour;
+@property (nonatomic, readonly) NSInteger weekday;
 
-- (NSInteger)month;
-- (NSInteger)day;
-- (NSInteger)hour;
-- (NSInteger)weekday;
+- (nullable NSDate *)beginningOfDay;
+- (BOOL)isSameDayWith:(nullable NSDate *)anotherDay;
 
-- (NSString *)toSecondEndingString;
-+ (NSDate *)dateFromSecondEndingString:(NSString *)dateString;
+- (nonnull NSString *)toSecondEndingString;
++ (nullable NSDate *)dateFromSecondEndingString:(nonnull NSString *)dateString;
 
-- (NSString *)toMillionSecondEndingString;
-+ (NSDate *)dateFromMillionSecondEndingString:(NSString *)dateString;
+- (nonnull NSString *)toMillionSecondEndingString;
++ (nullable NSDate *)dateFromMillionSecondEndingString:(nonnull NSString *)dateString;
 
-- (NSString *)toYearMonthDayString;
-+ (NSDate *)dateFromYearMonthDayEndingString:(NSString *)dateString;
+- (nonnull NSString *)toYearMonthDayString;
++ (nullable NSDate *)dateFromYearMonthDayEndingString:(nonnull NSString *)dateString;
 
-- (NSString *)toMinutesEndingString;
+- (nonnull NSString *)toMinutesEndingString;
 
-- (NSString *)toMonthDayString;
+- (nonnull NSString *)toMonthDayString;
 
 @end
