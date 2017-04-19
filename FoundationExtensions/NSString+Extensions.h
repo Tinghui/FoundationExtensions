@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import <CommonCrypto/CommonDigest.h>
 
 #define FormatString(args...)                   [NSString stringWithFormat:args]
 
@@ -55,7 +54,6 @@
 @property (nonatomic, readonly, nonnull)    NSString *stringByDeletingURLFragmentString;
 
 - (nonnull NSString *)stringByAppendingURLFragment:(nullable NSString *)fragment;
-
 
 
 #pragma mark - Size

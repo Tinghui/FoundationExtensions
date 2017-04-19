@@ -8,11 +8,4 @@
 
 #import "FoundationExtensions.h"
 
-@interface FoundationExtensions : NSObject
 
-@end
-
-
-@implementation FoundationExtensions
-
-@end

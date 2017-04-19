@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import <CommonCrypto/CommonDigest.h>
 
 #import "Blocks+Extensions.h"
 #import "Dispatch+Extensions.h"

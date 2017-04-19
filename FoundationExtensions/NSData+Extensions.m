@@ -6,6 +6,7 @@
 //  Copyright (c) 2014年 codingobjc.com. All rights reserved.
 //
 
+#import <CommonCrypto/CommonDigest.h>
 #import "NSData+Extensions.h"
 
 @implementation NSData (Extensions)
