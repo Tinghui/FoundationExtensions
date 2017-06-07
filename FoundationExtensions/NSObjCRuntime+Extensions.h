@@ -3,7 +3,7 @@
 //  Foundation+
 //
 //  Created by ZhangTinghui on 14/11/13.
-//  Copyright (c) 2014年 codingobjc.com. All rights reserved.
+//  Copyright (c) 2014年 www.morefun.mobi. All rights reserved.
 //
 
 #ifndef Extensions_NSObjCRuntime_Extensionsh
