@@ -19,5 +19,6 @@
 #import "NSNotificationCenter+Extensions.h"
 #import "NSObjCRuntime+Extensions.h"
 #import "NSString+Extensions.h"
+#import "NSString+MFURLEncodingDecoding.h"
 #import "NSIndexPath+Extensions.h"
 #import "NSDate+Extensions.h"

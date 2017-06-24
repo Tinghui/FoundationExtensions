@@ -18,7 +18,8 @@
 		E176C7711AEE6F0100B9793A /* NSFileManager+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E176C7611AEE6F0100B9793A /* NSFileManager+Extensions.m */; };
 		E176C7721AEE6F0100B9793A /* NSIndexPath+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E176C7631AEE6F0100B9793A /* NSIndexPath+Extensions.m */; };
 		E176C7731AEE6F0100B9793A /* NSNotificationCenter+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E176C7651AEE6F0100B9793A /* NSNotificationCenter+Extensions.m */; };
-		E176C7751AEE6F0100B9793A /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E176C76B1AEE6F0100B9793A /* NSString+Extensions.m */; };
+		E1CDF0F51EFEB7140040291F /* NSString+MFURLEncodingDecoding.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CDF0F31EFEB7140040291F /* NSString+MFURLEncodingDecoding.m */; };
+		E1CDF0F61EFEB7140040291F /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CDF0F41EFEB7140040291F /* NSString+Extensions.m */; };
 		E1D7EDB91C72C30D002E5CC6 /* FoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D7EDB81C72C30D002E5CC6 /* FoundationTests.m */; };
 		E1D7EDBB1C72CE82002E5CC6 /* Blocks+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D7EDBA1C72CE82002E5CC6 /* Blocks+Extensions.m */; };
 /* End PBXBuildFile section */
@@ -72,7 +73,9 @@
 		E176C7651AEE6F0100B9793A /* NSNotificationCenter+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+Extensions.m"; sourceTree = "<group>"; };
 		E176C7661AEE6F0100B9793A /* NSObjCRuntime+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObjCRuntime+Extensions.h"; sourceTree = "<group>"; };
 		E176C76A1AEE6F0100B9793A /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
-		E176C76B1AEE6F0100B9793A /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
+		E1CC16E41EFEB10800EC7179 /* NSString+MFURLEncodingDecoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MFURLEncodingDecoding.h"; sourceTree = "<group>"; };
+		E1CDF0F31EFEB7140040291F /* NSString+MFURLEncodingDecoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MFURLEncodingDecoding.m"; sourceTree = "<group>"; };
+		E1CDF0F41EFEB7140040291F /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
 		E1D7EDB81C72C30D002E5CC6 /* FoundationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundationTests.m; sourceTree = "<group>"; };
 		E1D7EDBA1C72CE82002E5CC6 /* Blocks+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Blocks+Extensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,7 +143,9 @@
 				E176C7641AEE6F0100B9793A /* NSNotificationCenter+Extensions.h */,
 				E176C7651AEE6F0100B9793A /* NSNotificationCenter+Extensions.m */,
 				E176C76A1AEE6F0100B9793A /* NSString+Extensions.h */,
-				E176C76B1AEE6F0100B9793A /* NSString+Extensions.m */,
+				E1CDF0F41EFEB7140040291F /* NSString+Extensions.m */,
+				E1CC16E41EFEB10800EC7179 /* NSString+MFURLEncodingDecoding.h */,
+				E1CDF0F31EFEB7140040291F /* NSString+MFURLEncodingDecoding.m */,
 			);
 			path = FoundationExtensions;
 			sourceTree = "<group>";
@@ -206,7 +211,7 @@
 		E176C7321AEE6ECD00B9793A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = www.morefun.mobi;
 				TargetAttributes = {
 					E176C7391AEE6ECD00B9793A = {
@@ -251,10 +256,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E176C7711AEE6F0100B9793A /* NSFileManager+Extensions.m in Sources */,
-				E176C7751AEE6F0100B9793A /* NSString+Extensions.m in Sources */,
 				E176C7701AEE6F0100B9793A /* NSException+Extensions.m in Sources */,
 				E176C76F1AEE6F0100B9793A /* NSError+Extensions.m in Sources */,
+				E1CDF0F61EFEB7140040291F /* NSString+Extensions.m in Sources */,
 				E176C76E1AEE6F0100B9793A /* NSDate+Extensions.m in Sources */,
+				E1CDF0F51EFEB7140040291F /* NSString+MFURLEncodingDecoding.m in Sources */,
 				E176C7721AEE6F0100B9793A /* NSIndexPath+Extensions.m in Sources */,
 				E176C76D1AEE6F0100B9793A /* NSData+Extensions.m in Sources */,
 				E176C76C1AEE6F0100B9793A /* NSBundle+Extensions.m in Sources */,
@@ -291,13 +297,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -319,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -334,13 +348,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -355,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
