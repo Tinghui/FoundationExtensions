@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "FoundationExtensions"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "Some Extensions Categories for Foundation framework"
   s.homepage     = "https://github.com/Tinghui/FoundationExtensions"
   s.license      = 'MIT'
