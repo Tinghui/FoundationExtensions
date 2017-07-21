@@ -25,6 +25,16 @@
     [super tearDown];
 }
 
+- (void)testNSDateFormat {
+    NSString *str = @"2017-10-09";
+    NSDate *date = [NSDate dateFromYearMonthDayEndingString:str];
+    XCTAssertTrue(date.year == 2017 && date.month == 10 && date.day == 9);
+    XCTAssertTrue([[date toSecondEndingString] isEqualToString:@"2017-10-09 00:00:00"]);
+    XCTAssertTrue([[date toYearMonthDayString] isEqualToString:@"2017-10-09"]);
+    XCTAssertTrue([[date toStringWithFormat:@"yyyy.MM.dd"] isEqualToString:@"2017.10.09"]);
+    XCTAssertTrue([[date toMonthDayString] isEqualToString:@"10月09日"]);
+}
+
 - (void)testNSFileManagerDirectoryPathes {
     NSString *path = [NSFileManager cachesDirectory];
     XCTAssertNotNil(path);
