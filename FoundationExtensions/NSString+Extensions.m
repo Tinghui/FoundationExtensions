@@ -38,6 +38,11 @@
     return (self != nil? self.trimmedString.length > 0: NO);
 }
 
+- (BOOL)isNumbers {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"^[0-9]+$"];
+    return [predicate evaluateWithObject:self];
+}
+
 - (BOOL)isAlphabetOrNumbers {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"^[a-zA-Z0-9]+$"];
     return [predicate evaluateWithObject:self];

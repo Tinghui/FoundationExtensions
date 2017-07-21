@@ -22,6 +22,7 @@
 #pragma mark - Utils
 @property (nonatomic, readonly, nonnull) NSString *trimmedString;
 @property (nonatomic, readonly) BOOL isNotNilOrWhiteSpace;
+@property (nonatomic, readonly) BOOL isNumbers;
 @property (nonatomic, readonly) BOOL isAlphabetOrNumbers;
 @property (nonatomic, readonly) BOOL isValidEmail;
 @property (nonatomic, readonly) BOOL isChineseCellPhoneNumber;
