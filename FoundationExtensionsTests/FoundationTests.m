@@ -37,16 +37,25 @@
 
 - (void)testNSFileManagerDirectoryPathes {
     NSString *path = [NSFileManager cachesDirectory];
-    XCTAssertNotNil(path);
     DLog(@"%s => %@", __PRETTY_FUNCTION__, path);
+    XCTAssertTrue([path.lastPathComponent isEqualToString:@"Caches"]);
     
     path = [NSFileManager documentDirectory];
-    XCTAssertNotNil(path);
     DLog(@"%s => %@", __PRETTY_FUNCTION__, path);
+    XCTAssertTrue([path.lastPathComponent isEqualToString:@"Documents"]);
     
     path = [NSFileManager libraryDirectory];
-    XCTAssertNotNil(path);
     DLog(@"%s => %@", __PRETTY_FUNCTION__, path);
+    XCTAssertTrue([path.lastPathComponent isEqualToString:@"Library"]);
+}
+
+#pragma mark - NSString(Format)
+- (void)testStringNumberFormat {
+    XCTAssertTrue([[NSString stringFor:1.2345 keepDecimalCount:2] isEqualToString:@"1.23"]);
+    XCTAssertTrue([[NSString stringFor:1.2345 keepDecimalCount:0] isEqualToString:@"1"]);
+    XCTAssertTrue([[NSString stringFor:1.0000 alwaysKeepTwoDecimal:YES] isEqualToString:@"1.00"]);
+    XCTAssertTrue([[NSString stringFor:1.0 alwaysKeepTwoDecimal:NO] isEqualToString:@"1"]);
+    XCTAssertTrue([[NSString stringFor:1.121 alwaysKeepTwoDecimal:NO] isEqualToString:@"1.12"]);
 }
 
 #pragma mark - NSString(URL) 

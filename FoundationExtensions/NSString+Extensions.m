@@ -87,5 +87,27 @@
                       ceilf(CGRectGetHeight(bounds)));
 }
 
+#pragma mark - Format
++ (nullable NSString *)stringFor:(double)number alwaysKeepTwoDecimal:(BOOL)keep {
+    if (keep) { return [self stringWithFormat:@"%.02f", number]; }
+    return [self stringFor:number keepDecimalCount:2];
+}
+
++ (nullable NSString *)stringFor:(double)number keepDecimalCount:(NSUInteger)keepDecimalCount {
+    static NSNumberFormatter * numberStringformatter = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        numberStringformatter = [[NSNumberFormatter alloc] init];
+    });
+    
+    NSMutableString *format = [@"0" mutableCopy];
+    for (NSUInteger i = 0; i < keepDecimalCount; i++) {
+        if (i == 0) { [format appendString:@"."]; }
+        [format appendString:@"#"];
+    }
+    numberStringformatter.positiveFormat = format;
+    return [numberStringformatter stringFromNumber:[NSNumber numberWithDouble:number]];
+}
+
 @end
 

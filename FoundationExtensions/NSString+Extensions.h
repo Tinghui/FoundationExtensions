@@ -30,6 +30,10 @@
 #pragma mark - Size
 - (CGSize)sizeWithFont:(nonnull UIFont *)font withMaxWidth:(CGFloat)maxWidth;
 
+#pragma mark - Format
++ (nullable NSString *)stringFor:(double)number alwaysKeepTwoDecimal:(BOOL)keep;
++ (nullable NSString *)stringFor:(double)number keepDecimalCount:(NSUInteger)keepDecimalCount;
+
 @end
 
 
