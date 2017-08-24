@@ -6,7 +6,7 @@ Some Extensions Categories for NSFoundation
 #### CocoaPods
 
 ```objc
-pod 'FoundationExtensions', :git => 'https://github.com/Tinghui/FoundationExtensions.git', :tag => '1.0.4'
+pod 'FoundationExtensions', :git => 'https://github.com/Tinghui/FoundationExtensions.git', :tag => '1.0.5'
 ```
 
 #### Usage
